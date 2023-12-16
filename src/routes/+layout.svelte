@@ -13,7 +13,7 @@
   const randomPosition = () => `${Math.floor(Math.random() * 100)}%`;
 
   onMount(() => {
-    let maxSnowflakes = 50;
+    const maxSnowflakes = window.innerWidth < 768 ? 10 : 50;
     const interval = setInterval(() => {
       snowflakes = [...snowflakes, snowflakes.length + 1];
       if (snowflakes.length >= maxSnowflakes) {
