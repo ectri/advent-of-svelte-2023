@@ -19,7 +19,9 @@
 
     <li>
       <a href="https://github.com/heygwangjin/advent-of-svelte-2023" target="_blank" rel="noopener">
-        <Github class="h-8 w-8 rounded-full bg-black p-1.5 text-white" />
+        <Github
+          class="h-8 w-8 rounded-full bg-black p-1.5 text-white transition-shadow hover:shadow-md hover:shadow-black"
+        />
       </a>
     </li>
   </ul>
