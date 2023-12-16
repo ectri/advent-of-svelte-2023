@@ -3,7 +3,7 @@
   import logo from "$lib/assets/logo.webp";
 </script>
 
-<header class="h-16 border-b px-4 md:px-12">
+<header class="sticky top-0 z-10 h-16 w-full border-b bg-white px-4 md:px-12">
   <ul class="mx-auto flex h-full max-w-screen-lg flex-nowrap items-center">
     <li class="h-full py-2">
       <img src={logo} class="max-h-full" alt="Advent Of Svelte 2023" />
