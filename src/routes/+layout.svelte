@@ -4,6 +4,6 @@
 </script>
 
 <Header />
-<div class="mx-auto max-w-screen-lg px-12 py-4">
+<div class="mx-auto max-w-screen-lg px-4 py-4 md:px-12">
   <slot />
 </div>
