@@ -2,8 +2,8 @@
   export let animationDuration: string;
   export let style: string;
 
-  const flakes = ["❄️", "⛄️", "🎄"];
-  const sizes = ["lg", "xl", "2xl"];
+  const flakes = ["❄️"];
+  const sizes = ["xs", "sm"];
 </script>
 
 <div
