@@ -7,13 +7,11 @@
   // 눈송이를 생성하기 위한 배열
   let snowflakes: number[] = [];
 
-  // 랜덤한 스타일 값을 생성하는 함수
-  const randomSize = () => `${Math.floor(Math.random() * 3) + 1}x`;
   const randomDuration = () => `${Math.floor(Math.random() * 5) + 5}s`;
   const randomPosition = () => `${Math.floor(Math.random() * 100)}%`;
 
   onMount(() => {
-    const maxSnowflakes = window.innerWidth < 768 ? 10 : 50;
+    const maxSnowflakes = window.innerWidth < 768 ? 10 : 30;
     const interval = setInterval(() => {
       snowflakes = [...snowflakes, snowflakes.length + 1];
       if (snowflakes.length >= maxSnowflakes) {
@@ -29,11 +27,7 @@
 </div>
 <div class="snow-container">
   {#each snowflakes as _}
-    <Snowflake
-      size={randomSize()}
-      animationDuration={randomDuration()}
-      style={`left: ${randomPosition()};`}
-    />
+    <Snowflake animationDuration={randomDuration()} style={`left: ${randomPosition()};`} />
   {/each}
 </div>
 
