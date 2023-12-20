@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { Gift, Clock, TreePine } from "lucide-svelte";
-  import { fade } from "svelte/transition";
-  import { getDate } from "date-fns";
-  import { onMount } from "svelte";
   import { CHALLENGES, type Challenge } from "$lib/data/levels";
+  import { getDate } from "date-fns";
+  import { Clock, Gift, TreePine } from "lucide-svelte";
+  import { fade } from "svelte/transition";
 
   const emojis = ["🎅", "🎄", "⭐", "🧑‍🎄", "🎁", "❄️", "☃️", "🧦", "🤶"];
   const emojisLength = emojis.length;
@@ -11,15 +10,15 @@
   const completedChallenges = CHALLENGES.filter((challenge) => challenge.isDone).length;
   const totalChallenges = today;
   const uncompletedChallenges = totalChallenges - completedChallenges;
-  let areChallengesVisible = false;
+  let areChallengesVisible = $state(false);
+
+  $effect(() => {
+    areChallengesVisible = true;
+  });
 
   function showChallenge({ id }: Challenge) {
     return id <= today;
   }
-
-  onMount(() => {
-    areChallengesVisible = true;
-  });
 </script>
 
 <main class="my-4">
