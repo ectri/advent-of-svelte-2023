@@ -53,7 +53,7 @@
       {#if areChallengesVisible && showChallenge(challenge)}
         {@const isEven = index % 2 === 0}
         <li
-          class="transition-transform hover:scale-[1.03]"
+          class="bg-white transition-transform hover:scale-[1.03]"
           transition:fade={{ delay: index * 100 }}
         >
           <a
