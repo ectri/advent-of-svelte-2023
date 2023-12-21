@@ -26,7 +26,7 @@ export const CHALLENGES: Challenge[] = [
     slug: "challenge-01",
     title: "Naughty or Nice",
     description: "Help the elves to keep track of children's behavior",
-    isDone: false,
+    isDone: true,
     image: challenge_base
   },
   {
