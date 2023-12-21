@@ -42,7 +42,7 @@
 
   <h2 class="mb-4 text-xl font-semibold">Challenges</h2>
 
-  <div class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3">
+  <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
     {#each CHALLENGES as challenge, index}
       {#if areChallengesVisible && showChallenge(challenge)}
         {@const isEven = index % 2 === 0}

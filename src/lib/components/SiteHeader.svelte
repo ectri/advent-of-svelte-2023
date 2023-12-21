@@ -9,7 +9,7 @@
 <header
   class="supports-[backdrop-filter]:bg-background/60 bg-background/95 sticky top-0 z-50 w-full border-b shadow-sm backdrop-blur"
 >
-  <div class="mx-auto flex h-16 max-w-screen-lg flex-nowrap items-center px-4 md:px-0">
+  <div class="mx-auto flex h-16 max-w-screen-lg flex-nowrap items-center px-4 lg:px-0">
     <a href="/" class="flex items-center">
       <img src={logo} class="max-h-full w-12" alt="Advent Of Svelte 2023" />
       <span class="text-[15px] font-bold sm:inline-block lg:text-base">

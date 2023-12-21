@@ -18,7 +18,7 @@
 </script>
 
 <SiteHeader />
-<div class="mx-auto max-w-screen-lg px-4 py-4 md:px-0">
+<div class="mx-auto max-w-screen-lg px-4 py-4 lg:px-0">
   {@render children()}
 </div>
 <div class="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full">
