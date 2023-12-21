@@ -12,7 +12,7 @@
 <CalendarPrimitive.Cell
   {date}
   class={cn(
-    "[&:has([data-selected][data-outside-month])]:bg-accent/50 [&:has([data-selected])]:bg-accent relative h-9 w-9 p-0 text-center text-sm focus-within:relative focus-within:z-20 first:[&:has([data-selected])]:rounded-l-md last:[&:has([data-selected])]:rounded-r-md",
+    "relative h-9 w-9 p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([data-selected])]:bg-accent first:[&:has([data-selected])]:rounded-l-md last:[&:has([data-selected])]:rounded-r-md [&:has([data-selected][data-outside-month])]:bg-accent/50",
     className
   )}
   {...$$restProps}

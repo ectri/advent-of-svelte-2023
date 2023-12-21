@@ -28,7 +28,7 @@
   }
 </script>
 
-<div class="flex items-start gap-4">
+<div class="flex flex-col items-start gap-4 lg:flex-row">
   <Card.Root class="w-full">
     <Card.Header>
       <Card.Title>Naughty or Nice</Card.Title>

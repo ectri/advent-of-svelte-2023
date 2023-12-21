@@ -7,7 +7,7 @@
 </script>
 
 <header
-  class="supports-[backdrop-filter]:bg-background/60 bg-background/95 sticky top-0 z-50 w-full border-b shadow-sm backdrop-blur"
+  class="sticky top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60"
 >
   <div class="mx-auto flex h-16 max-w-screen-lg flex-nowrap items-center px-4 lg:px-0">
     <a href="/" class="flex items-center">

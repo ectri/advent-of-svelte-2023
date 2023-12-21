@@ -2,7 +2,9 @@
   import * as Card from "$lib/components/ui/card";
   import { CHALLENGES, type Challenge } from "$lib/data/levels";
   import { getDate } from "date-fns";
-  import { Clock, Gift, TreePine } from "lucide-svelte";
+  import Clock from "phosphor-svelte/lib/Clock";
+  import Gift from "phosphor-svelte/lib/Gift";
+  import TreeEvergreen from "phosphor-svelte/lib/TreeEvergreen";
   import { fade } from "svelte/transition";
 
   const emojis = ["🎅", "🎄", "⭐", "🧑‍🎄", "🎁", "❄️", "☃️", "🧦", "🤶"];
@@ -25,18 +27,18 @@
 <main class="my-4">
   <div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
     <div class="flex items-center justify-between rounded-lg border px-4 py-2 md:p-4">
-      <h1><Gift class="mr-2 inline text-green-500" />Completed</h1>
-      <span class="text-3xl">{completedChallenges}</span>
+      <h1><Gift class="mr-2 inline text-xl text-green-500" />Completed</h1>
+      <span class="text-3xl text-green-500">{completedChallenges}</span>
     </div>
 
     <div class="flex items-center justify-between rounded-lg border px-4 py-2 md:p-4">
-      <h1><Clock class="mr-2 inline text-red-500" />Uncompleted</h1>
-      <span class="text-3xl">{uncompletedChallenges}</span>
+      <h1><Clock class="mr-2 inline text-xl text-red-500" />Uncompleted</h1>
+      <span class="text-3xl text-red-500">{uncompletedChallenges}</span>
     </div>
 
     <div class="flex items-center justify-between rounded-lg border px-4 py-2 md:p-4">
-      <h1><TreePine class="mr-2 inline text-blue-500 " />Total</h1>
-      <span class="text-3xl">{totalChallenges}</span>
+      <h1><TreeEvergreen class="mr-2 inline text-xl text-blue-500" />Total</h1>
+      <span class="text-3xl text-blue-500">{totalChallenges}</span>
     </div>
   </div>
 
@@ -52,7 +54,7 @@
         >
           <Card.Root
             class={challenge.isDone
-              ? "hover:bg-muted/40 h-full transition-transform ease-linear hover:scale-[1.03]"
+              ? "h-full transition-transform ease-linear hover:scale-[1.03] hover:bg-muted/40"
               : "cursor-default blur-sm"}
           >
             <Card.Header class="flex flex-row items-center justify-between py-2">
