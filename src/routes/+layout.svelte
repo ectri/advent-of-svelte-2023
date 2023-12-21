@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Header from "$lib/ui/components/Header.svelte";
-  import Snowflake from "$lib/ui/components/Snowflake.svelte";
+  import Header from "$lib/components/Header.svelte";
+  import Snowflake from "$lib/components/Snowflake.svelte";
   import "../app.css";
 
   let snowflakes: number[] = $state([]);
