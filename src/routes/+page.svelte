@@ -1,4 +1,5 @@
 <script lang="ts">
+  import * as Card from "$lib/components/ui/card";
   import { CHALLENGES, type Challenge } from "$lib/data/levels";
   import { getDate } from "date-fns";
   import { Clock, Gift, TreePine } from "lucide-svelte";
@@ -41,42 +42,37 @@
 
   <h2 class="mb-4 text-xl font-semibold">Challenges</h2>
 
-  <ul class="grid grid-cols-1 gap-x-4 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
+  <div class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3">
     {#each CHALLENGES as challenge, index}
       {#if areChallengesVisible && showChallenge(challenge)}
         {@const isEven = index % 2 === 0}
-        <li
-          class="transition-transform hover:scale-[1.03]"
+        <a
+          href={challenge.isDone ? `${challenge.slug}` : "#"}
           transition:fade={{ delay: index * 100 }}
         >
-          <a
-            href={challenge.slug}
-            class="relative block rounded-lg border px-4 py-2 shadow-md {!challenge.isDone &&
-              'pointer-events-none blur-sm'}"
+          <Card.Root
+            class={challenge.isDone
+              ? "hover:bg-muted/40 h-full transition-transform ease-linear hover:scale-[1.03]"
+              : "cursor-default blur-sm"}
           >
-            <span class="absolute left-4 top-2">
+            <Card.Header class="flex flex-row items-center justify-between py-2">
               <span class="text-xl">{emojis[index % emojisLength]}</span>
-            </span>
-
-            <span
-              class="absolute right-4 top-2 text-4xl {isEven ? 'text-green-500' : 'text-red-500'}"
-            >
-              {challenge.id.toString().padStart(2, "0")}
-            </span>
-
-            <img
-              class="mt-8 h-[280px] w-full rounded-full object-cover p-4"
-              src={challenge.image}
-              alt={challenge.title}
-            />
-
-            <div class="mt-4 h-[100px]">
-              <h2 class="text-lg font-semibold">{challenge.title}</h2>
-              <p class="text-sm">{challenge.description}</p>
-            </div>
-          </a>
-        </li>
+              <span class="text-4xl {isEven ? 'text-green-500' : 'text-red-500'}">
+                {challenge.id.toString().padStart(2, "0")}
+              </span>
+            </Card.Header>
+            <Card.Content class="space-y-4">
+              <img
+                class="h-[280px] w-full rounded-full object-cover p-4"
+                src={challenge.image}
+                alt={challenge.title}
+              />
+              <Card.Title>{challenge.title}</Card.Title>
+              <Card.Description>{challenge.description}</Card.Description>
+            </Card.Content>
+          </Card.Root>
+        </a>
       {/if}
     {/each}
-  </ul>
+  </div>
 </main>
