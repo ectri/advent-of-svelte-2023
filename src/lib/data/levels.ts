@@ -42,7 +42,7 @@ export const CHALLENGES: Challenge[] = [
     slug: "challenge-03",
     title: "Sled Load Balancer",
     description: "Sled Load Balancer",
-    isDone: false,
+    isDone: true,
     image: challenge_03
   },
   {
