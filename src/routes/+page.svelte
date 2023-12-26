@@ -9,9 +9,8 @@
 
   const emojis = ["🎅", "🎄", "⭐", "🧑‍🎄", "🎁", "❄️", "☃️", "🧦", "🤶"];
   const emojisLength = emojis.length;
-  const today = getDate(new Date());
+  const totalChallenges = CHALLENGES.length;
   const completedChallenges = CHALLENGES.filter((challenge) => challenge.isDone).length;
-  const totalChallenges = today;
   const uncompletedChallenges = totalChallenges - completedChallenges;
   let areChallengesVisible = $state(false);
 
@@ -20,7 +19,7 @@
   });
 
   function showChallenge({ id }: Challenge) {
-    return id <= today;
+    return id <= totalChallenges;
   }
 </script>
 
