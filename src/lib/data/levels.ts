@@ -190,4 +190,6 @@ export const CHALLENGES: Challenge[] = [
   }
 ];
 
-export const challengeNumbers = CHALLENGES.map((challenge) => challenge.id);
+export const challengeNumbers = CHALLENGES.filter((challenge) => challenge.isDone).map(
+  (challenge) => challenge.id
+);
