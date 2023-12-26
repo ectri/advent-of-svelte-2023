@@ -189,3 +189,5 @@ export const CHALLENGES: Challenge[] = [
     image: challenge_base
   }
 ];
+
+export const challengeNumbers = CHALLENGES.map((challenge) => challenge.id);
