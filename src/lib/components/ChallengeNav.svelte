@@ -11,8 +11,8 @@
   let { path } = $props<Props>();
 
   const currentChallenge = $derived(Number(path.split("/")[2]));
-  const nextChallenge = $derived(currentChallenge + 1);
-  const prevChallenge = $derived(currentChallenge - 1);
+  const nextChallenge = $derived(challengeNumbers[challengeNumbers.indexOf(currentChallenge) + 1]);
+  const prevChallenge = $derived(challengeNumbers[challengeNumbers.indexOf(currentChallenge) - 1]);
   const title = $derived(getTitle());
 
   function getTitle() {
