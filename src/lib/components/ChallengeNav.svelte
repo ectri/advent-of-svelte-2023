@@ -16,7 +16,7 @@
   const title = $derived(getTitle());
 
   function getTitle() {
-    return `Challenge ${currentChallenge.toString().padStart(2, "0")} - ${
+    return `Challenge ${currentChallenge} - ${
       CHALLENGES.find((c) => c.id === currentChallenge)?.title
     }`;
   }

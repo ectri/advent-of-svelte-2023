@@ -58,7 +58,7 @@
             <Card.Header class="flex flex-row items-center justify-between py-2">
               <span class="text-xl">{emojis[index % emojisLength]}</span>
               <span class="text-4xl {isEven ? 'text-green-500' : 'text-red-500'}">
-                {challenge.id.toString().padStart(2, "0")}
+                {challenge.id}
               </span>
             </Card.Header>
             <Card.Content class="space-y-4">
