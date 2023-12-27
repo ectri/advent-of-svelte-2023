@@ -43,7 +43,7 @@
     </Tooltip.Root>
   {/if}
 
-  <h2 class="text-3xl font-medium tracking-tight">
+  <h2 class="text-center text-lg font-medium tracking-tight lg:text-3xl">
     {title}
   </h2>
   {#if currentChallenge === challengeNumbers[challengeNumbers.length - 1]}
