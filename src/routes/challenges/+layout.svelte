@@ -1,13 +1,11 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
+  import { page } from "$app/stores";
   import ChallengeNav from "$lib/components/ChallengeNav.svelte";
 
   let { children } = $props();
 </script>
 
-{#if browser}
-  <ChallengeNav path={window.location.pathname} />
-{/if}
+<ChallengeNav path={$page.url.pathname} />
 
 <div>
   {@render children()}

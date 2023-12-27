@@ -34,7 +34,7 @@
           builders={[builder]}
           size="icon"
           variant="outline"
-          href="/challenges/{prevChallenge.toString().padStart(2, '0')}"
+          href="/challenges/{prevChallenge}"
         >
           <CaretLeft class="size-4" />
         </Button>
@@ -57,7 +57,7 @@
           builders={[builder]}
           size="icon"
           variant="outline"
-          href="/challenges/{nextChallenge.toString().padStart(2, '0')}"
+          href="/challenges/{nextChallenge}"
         >
           <CaretRight class="size-4" />
         </Button>

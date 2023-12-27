@@ -47,7 +47,7 @@
       {#if areChallengesVisible && showChallenge(challenge)}
         {@const isEven = index % 2 === 0}
         <a
-          href={challenge.isDone ? `/challenges/${challenge.id.toString().padStart(2, "0")}` : "#"}
+          href={challenge.isDone ? `/challenges/${challenge.id}` : "#"}
           transition:fade={{ delay: index * 100 }}
         >
           <Card.Root
