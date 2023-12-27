@@ -1,7 +1,6 @@
 <script lang="ts">
   import * as Card from "$lib/components/ui/card";
   import { CHALLENGES, type Challenge } from "$lib/data/levels";
-  import { getDate } from "date-fns";
   import Clock from "phosphor-svelte/lib/Clock";
   import Gift from "phosphor-svelte/lib/Gift";
   import TreeEvergreen from "phosphor-svelte/lib/TreeEvergreen";
