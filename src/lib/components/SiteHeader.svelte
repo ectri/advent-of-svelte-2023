@@ -1,9 +1,9 @@
 <script lang="ts">
   import logo from "$lib/assets/logo.webp";
+  import GitHubIcon from "$lib/components/icons/github.svelte";
+  import XIcon from "$lib/components/icons/x.svelte";
+  import { buttonVariants } from "$lib/components/ui/button";
   import { cn } from "$lib/utils";
-  import GitHubIcon from "./icons/github.svelte";
-  import XIcon from "./icons/x.svelte";
-  import { buttonVariants } from "./ui/button";
 </script>
 
 <header
