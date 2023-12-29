@@ -31,7 +31,7 @@ export const CHALLENGES: Challenge[] = [
     id: 2,
     title: "Merry Munch-o-Meter",
     description: "Click on the colorful cookies to give them to Santa",
-    isDone: false,
+    isDone: true,
     image: challenge_02
   },
   {
